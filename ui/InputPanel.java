@@ -30,7 +30,7 @@ public class InputPanel extends JPanel {
 
     public InputPanel() {
 
-        // 🎨 COLORS
+        // COLORS
         Color bgColor = new Color(245, 247, 250);
         Color panelColor = Color.WHITE;
         Color accent = new Color(76, 175, 80);
@@ -147,7 +147,7 @@ public class InputPanel extends JPanel {
             totalEnergy += energy;
             applianceData.put(name, energy);
 
-            // ✅ SAVE TO DATABASE
+            // SAVE TO DATABASE
             saveToDatabase(name, power, hours, rate, duration, solarWatt, sunlight);
 
             resultArea.append("✔ " + name + " → " + energy + " kWh\n");
@@ -163,7 +163,7 @@ public class InputPanel extends JPanel {
         }
     }
 
-    // ✅ NEW METHOD - Saves appliance to SQLite
+    //  Saves appliance to SQLite
     private void saveToDatabase(String name, double power, double hours,
                                 double rate, String duration,
                                 double solarWatt, double sunlight) {
@@ -265,7 +265,7 @@ public class InputPanel extends JPanel {
     }
 
     private void resetAll() {
-        // ✅ CLEAR DATABASE
+        // CLEAR DATABASE
         clearDatabase();
 
         totalEnergy = 0;
@@ -283,7 +283,7 @@ public class InputPanel extends JPanel {
         barChartPanel.setChart(null);
     }
 
-    // ✅ NEW METHOD - Clears all records from DB on Reset
+    // Clears all records from DB on Reset
     private void clearDatabase() {
         String sql = "DELETE FROM appliances";
 
